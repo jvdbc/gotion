@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "go",
+			"label": "go: build workspace",
+			"command": "build",
+			"args": [
+				"-o",
+				"build/",
+				"./cmd/gotion"
+			],
+			"problemMatcher": [
+				"$go"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "windows: go build ..."
+		},
+		{
+			"type": "shell",
+			"label": "go: build linux workspace",
+			"command": "./make.bash",
+			"args": [
+			],
+			"problemMatcher": [
+				"$go"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "linux: go build",
+		}
+	]
+}
